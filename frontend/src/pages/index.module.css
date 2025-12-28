@@ -4,20 +4,241 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
+  padding: 5rem 0;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(135deg, #0a0a0a 0%, #121212 100%);
+  color: white;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+.robotImage {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  filter: drop-shadow(0 10px 20px rgba(0, 168, 255, 0.3));
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+}
+
+.robotImage:hover {
+  transform: scale(1.05);
+}
+
+.heroTextContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  height: 100%;
+  text-align: left;
+}
+
+.hero__title {
+  color: white;
+  margin-bottom: 1.5rem;
+  font-size: 2.8rem;
+  text-shadow: 0 0 20px rgba(0, 168, 255, 0.5);
+}
+
+.hero__subtitle {
+  color: #e0e0e0;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.7;
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 3rem 1rem;
+  }
+
+  .heroTextContent {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .hero__title {
+    font-size: 2.2rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+
+  .robotIllustration {
+    padding: 1rem;
+  }
+
+  .robotSvg {
+    max-width: 200px;
   }
 }
 
 .buttons {
   display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 996px) {
+  .buttons {
+    justify-content: center;
+  }
+}
+
+.button {
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 1rem;
+}
+
+.button--primary {
+  background: linear-gradient(135deg, #00a8ff 0%, #00bcd4 100%) !important;
+  color: white !important;
+  box-shadow: 0 0 15px rgba(0, 168, 255, 0.4);
+}
+
+.button--primary:hover {
+  background: linear-gradient(135deg, #00bcd4 0%, #00a8ff 100%) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 168, 255, 0.6);
+}
+
+.button--secondary {
+  background-color: rgba(26, 26, 26, 0.8) !important;
+  color: white !important;
+  border: 1px solid #00a8ff !important;
+  box-shadow: 0 0 10px rgba(0, 168, 255, 0.2);
+}
+
+.button--secondary:hover {
+  background-color: rgba(26, 26, 26, 1) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 168, 255, 0.4);
+}
+
+.modules {
+  background-color: #121212;
+  padding: 4rem 0;
+}
+
+.moduleCard {
+  background: #1a1a1a;
+  border: 1px solid #3a3a3a;
+  border-radius: 12px;
+  padding: 2rem;
+  height: 100%;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.moduleCard:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #00a8ff, #00bcd4);
+}
+
+.moduleCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  border-color: #00a8ff;
+}
+
+.moduleCard h3 {
+  color: #00a8ff;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.moduleCard p {
+  color: #e0e0e0;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.moduleLink {
+  color: #33bbff;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.moduleLink:hover {
+  color: #00a8ff;
+  text-decoration: underline;
+}
+
+.keyFeatures {
+  background-color: #1a1a1a;
+  padding: 4rem 0;
+}
+
+.keyFeatures h2 {
+  color: #00a8ff;
+  font-size: 2.2rem;
+  margin-bottom: 0;
+}
+
+.featureCard {
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 10px;
+  padding: 1.8rem;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  border-color: #00bcd4;
+}
+
+.featureCard h4 {
+  color: #00bcd4;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.featureCard p {
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 996px) {
+  .modules {
+    padding: 2rem 0;
+  }
+
+  .keyFeatures {
+    padding: 2rem 0;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .button {
+    width: 100%;
+    max-width: 300px;
+  }
 }

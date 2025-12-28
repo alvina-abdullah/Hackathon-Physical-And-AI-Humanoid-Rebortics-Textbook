@@ -1,30 +1,617 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Custom CSS for Physical AI & Humanoid Robotics Documentation
+ * Futuristic, clean, and research-grade interface
  */
 
-/* You can override the default Infima variables here. */
+/* Robotics-inspired color palette */
 :root {
-  --ifm-color-primary: #1811d3;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* Charcoal & Graphite backgrounds */
+  --robotics-charcoal: #1a1a1a;
+  --robotics-graphite: #2a2a2a;
+  --robotics-dark-gray: #121212;
+
+  /* Electric Blue & Cyan accents */
+  --electric-blue: #00a8ff;
+  --electric-blue-dark: #0088cc;
+  --electric-blue-light: #33bbff;
+  --soft-cyan: #00e5ff;
+  --cyan-accent: #00bcd4;
+
+  /* White & Light text */
+  --robotics-white: #f0f0f0;
+  --robotics-light-gray: #e0e0e0;
+  --robotics-text: #ffffff;
+
+  /* Docusaurus variables using robotics palette */
+  --ifm-color-primary: var(--electric-blue);
+  --ifm-color-primary-dark: var(--electric-blue-dark);
+  --ifm-color-primary-darker: #0077b3;
+  --ifm-color-primary-darkest: #006699;
+  --ifm-color-primary-light: var(--electric-blue-light);
+  --ifm-color-primary-lighter: #66ccff;
+  --ifm-color-primary-lightest: #99ddff;
+
+  /* Backgrounds */
+  --ifm-background-color: var(--robotics-dark-gray);
+  --ifm-background-surface-color: var(--robotics-charcoal);
+  --ifm-navbar-background-color: rgba(26, 26, 26, 0.95);
+  --ifm-sidebar-background-color: var(--robotics-graphite);
+  --ifm-footer-background-color: var(--robotics-charcoal);
+
+  /* Text colors */
+  --ifm-font-color-base: var(--robotics-text);
+  --ifm-heading-color: var(--robotics-light-gray);
+  --ifm-color-content: var(--robotics-light-gray);
+
+  /* Borders */
+  --ifm-color-border: #3a3a3a;
+  --ifm-toc-border-color: #404040;
+
+  /* Code blocks */
+  --ifm-pre-background: var(--robotics-graphite);
+  --ifm-code-background: #2d2d2d;
+  --ifm-code-color: var(--robotics-light-gray);
+
+  /* Spacing and typography */
+  --ifm-line-height-base: 1.7;
+  --ifm-font-size-base: 17px;
+  --ifm-container-width: 1400px;
+  --ifm-container-padding-horizontal: 2rem;
+
+  /* Shadows - subtle, not heavy */
+  --ifm-global-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --ifm-global-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+
+  /* Gradients for modern feel */
+  --robotics-gradient: linear-gradient(135deg, var(--electric-blue) 0%, var(--cyan-accent) 100%);
+  --robotics-gradient-reverse: linear-gradient(135deg, var(--cyan-accent) 0%, var(--electric-blue) 100%);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Dark theme (default) */
 [data-theme='dark'] {
-  --ifm-color-primary: #504bdd;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: var(--electric-blue);
+  --ifm-color-primary-dark: var(--electric-blue-dark);
+  --ifm-color-primary-darker: #0077b3;
+  --ifm-color-primary-darkest: #006699;
+  --ifm-color-primary-light: var(--electric-blue-light);
+  --ifm-color-primary-lighter: #66ccff;
+  --ifm-color-primary-lightest: #99ddff;
+
+  --ifm-background-color: var(--robotics-dark-gray);
+  --ifm-background-surface-color: var(--robotics-charcoal);
+  --ifm-navbar-background-color: rgba(26, 26, 26, 0.95);
+  --ifm-sidebar-background-color: var(--robotics-graphite);
+  --ifm-footer-background-color: var(--robotics-charcoal);
+
+  --ifm-font-color-base: var(--robotics-text);
+  --ifm-heading-color: var(--robotics-light-gray);
+  --ifm-color-content: var(--robotics-light-gray);
+
+  --ifm-color-border: #3a3a3a;
+  --ifm-toc-border-color: #404040;
+
+  --ifm-pre-background: var(--robotics-graphite);
+  --ifm-code-background: #2d2d2d;
+  --ifm-code-color: var(--robotics-light-gray);
+}
+
+/* Light theme */
+[data-theme='light'] {
+  --ifm-color-primary: var(--electric-blue);
+  --ifm-color-primary-dark: var(--electric-blue-dark);
+  --ifm-color-primary-darker: #0077b3;
+  --ifm-color-primary-darkest: #006699;
+  --ifm-color-primary-light: var(--electric-blue-light);
+  --ifm-color-primary-lighter: #66ccff;
+  --ifm-color-primary-lightest: #99ddff;
+
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #fafafa;
+  --ifm-navbar-background-color: rgba(255, 255, 255, 0.95);
+  --ifm-sidebar-background-color: #f5f5f5;
+  --ifm-footer-background-color: #f8f9fa;
+
+  --ifm-font-color-base: #212529;
+  --ifm-heading-color: #1a1a1a;
+  --ifm-color-content: #212529;
+
+  --ifm-color-border: #dee2e6;
+  --ifm-toc-border-color: #ced4da;
+
+  --ifm-pre-background: #f8f9fa;
+  --ifm-code-background: #f1f3f4;
+  --ifm-code-color: #212529;
+}
+
+/* Typography - Modern sans-serif for readability */
+html {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Enhanced heading hierarchy for technical content */
+h1 {
+  font-weight: 700;
+  font-size: 2.8rem;
+  color: var(--ifm-heading-color);
+  margin-bottom: 1.8rem;
+  letter-spacing: -0.02em;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+h1:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--robotics-gradient);
+  border-radius: 2px;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 2.2rem;
+  color: var(--electric-blue);
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--ifm-color-border);
+  position: relative;
+}
+
+h2:before {
+  content: '▶';
+  position: absolute;
+  left: -25px;
+  color: var(--electric-blue-light);
+  opacity: 0.7;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: var(--cyan-accent);
+  margin-top: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+h4, h5, h6 {
+  color: var(--electric-blue-light);
+  font-weight: 500;
+}
+
+/* Paragraph styling for long-form reading */
+.markdown p {
+  line-height: var(--ifm-line-height-base);
+  font-size: var(--ifm-font-size-base);
+  margin-bottom: 1.4rem;
+  color: var(--ifm-color-content);
+}
+
+/* Link styling with electric blue accents */
+a {
+  color: var(--electric-blue);
+  text-decoration: none;
+  position: relative;
+}
+
+a:hover {
+  color: var(--electric-blue-light);
+  text-decoration: underline;
+}
+
+a:after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--electric-blue);
+  transition: width 0.3s ease;
+}
+
+a:hover:after {
+  width: 100%;
+}
+
+/* Navigation bar styling */
+.navbar {
+  background-color: var(--ifm-navbar-background-color);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.8rem 0;
+}
+
+.navbar__inner {
+  max-width: var(--ifm-container-width);
+  margin: 0 auto;
+  padding: 0 var(--ifm-container-padding-horizontal);
+}
+
+.navbar__title {
+  font-weight: 600;
+  background: var(--robotics-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.navbar__link {
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar__link:hover {
+  color: var(--electric-blue-light);
+}
+
+/* Sidebar styling */
+.menu {
+  background-color: var(--ifm-sidebar-background-color);
+  border-right: 1px solid var(--ifm-color-border);
+  padding: 1.5rem 1rem;
+  height: calc(100vh - 60px);
+  position: sticky;
+  top: 60px;
+  overflow-y: auto;
+}
+
+.menu__list {
+  padding: 0.5rem 0;
+}
+
+.menu__list-item {
+  margin: 0.3rem 0;
+}
+
+.menu__link {
+  color: var(--ifm-font-color-base);
+  border-radius: 6px;
+  margin: 0.2rem 0;
+  transition: all 0.2s ease;
+  font-weight: 400;
+}
+
+.menu__link--active {
+  background-color: rgba(0, 168, 255, 0.15);
+  color: var(--electric-blue-light);
+  border-left: 3px solid var(--electric-blue);
+  font-weight: 500;
+}
+
+.menu__link:hover {
+  background-color: rgba(0, 168, 255, 0.1);
+  color: var(--electric-blue-light);
+}
+
+/* Category styling in sidebar */
+.menu__list-item-collapsible {
+  margin: 0.4rem 0;
+}
+
+.menu__list-item-collapsible .menu__link {
+  font-weight: 500;
+  color: var(--electric-blue-light);
+}
+
+/* Content area styling */
+.main-wrapper {
+  background-color: var(--ifm-background-color);
+  min-height: calc(100vh - 120px);
+}
+
+.container {
+  max-width: var(--ifm-container-width);
+  margin: 0 auto;
+  padding: 0 var(--ifm-container-padding-horizontal);
+}
+
+/* Enhanced admonitions for technical documentation */
+.alert {
+  border: 1px solid var(--ifm-color-border);
+  border-left: 4px solid var(--electric-blue);
+  background-color: rgba(0, 168, 255, 0.05);
+  border-radius: 6px;
+  margin: 1.5rem 0;
+  box-shadow: var(--ifm-global-shadow);
+}
+
+.alert--info {
+  border-left-color: var(--electric-blue);
+  background-color: rgba(0, 168, 255, 0.05);
+}
+
+.alert--note {
+  border-left-color: var(--cyan-accent);
+  background-color: rgba(0, 188, 212, 0.05);
+}
+
+.alert--tip {
+  border-left-color: #4caf50;
+  background-color: rgba(76, 175, 80, 0.05);
+}
+
+.alert--warning {
+  border-left-color: #ff9800;
+  background-color: rgba(255, 152, 0, 0.05);
+}
+
+.alert--danger {
+  border-left-color: #f44336;
+  background-color: rgba(244, 67, 54, 0.05);
+}
+
+/* Custom callout styles for definitions, equations, and key ideas */
+.definition-box {
+  background: linear-gradient(135deg, rgba(0, 168, 255, 0.1) 0%, rgba(0, 188, 212, 0.1) 100%);
+  border: 1px solid var(--electric-blue);
+  border-left: 4px solid var(--electric-blue);
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin: 1.5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.definition-box:before {
+  content: 'DEFINITION';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  background: var(--robotics-charcoal);
+  color: var(--electric-blue);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.equation-box {
+  background: rgba(0, 168, 255, 0.08);
+  border: 1px solid var(--cyan-accent);
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin: 1.5rem 0;
+  text-align: center;
+  font-family: 'Latin Modern Math', 'STIX Two Math', serif;
+  font-size: 1.2rem;
+}
+
+.key-idea-box {
+  background: linear-gradient(135deg, rgba(0, 188, 212, 0.1) 0%, rgba(0, 168, 255, 0.05) 100%);
+  border: 1px solid var(--cyan-accent);
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin: 1.5rem 0;
+  position: relative;
+  border-left: 4px solid var(--cyan-accent);
+}
+
+/* Code styling for ROS, Python, and C++ */
+code {
+  background-color: var(--ifm-code-background);
+  color: var(--ifm-code-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+  border: 1px solid var(--ifm-color-border);
+}
+
+pre {
+  background-color: var(--ifm-pre-background) !important;
+  border: 1px solid var(--ifm-color-border);
+  border-radius: 8px;
+  padding: 1.2rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  overflow-x: auto;
+  box-shadow: var(--ifm-global-shadow);
+}
+
+/* Blockquotes styling for technical notes */
+blockquote {
+  border-left: 3px solid var(--electric-blue);
+  background-color: rgba(0, 168, 255, 0.05);
+  padding: 1.2rem 1.5rem;
+  margin: 1.8rem 0;
+  font-style: normal;
+  color: var(--ifm-color-content);
+  border-radius: 0 6px 6px 0;
+  position: relative;
+}
+
+blockquote:before {
+  content: 'ℹ';
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: var(--electric-blue);
+  font-size: 1.2rem;
+}
+
+/* Tables styling for technical data */
+table {
+  border: 1px solid var(--ifm-color-border);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  margin: 1.8rem 0;
+  box-shadow: var(--ifm-global-shadow);
+}
+
+table th,
+table td {
+  border: 1px solid var(--ifm-color-border);
+  padding: 0.9rem;
+}
+
+table th {
+  background-color: rgba(0, 168, 255, 0.1);
+  font-weight: 600;
+  color: var(--ifm-heading-color);
+}
+
+/* Footer styling */
+.footer {
+  background-color: var(--ifm-footer-background-color);
+  border-top: 1px solid var(--ifm-color-border);
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.footer__title {
+  color: var(--electric-blue);
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+}
+
+.footer__link-item {
+  color: var(--ifm-color-content);
+  transition: color 0.2s ease;
+}
+
+.footer__link-item:hover {
+  color: var(--electric-blue-light);
+}
+
+/* Hero section styling */
+.hero {
+  background: var(--robotics-gradient);
+  color: white;
+  text-align: center;
+  padding: 4rem 0;
+  margin-bottom: 3rem;
+  border-radius: 0 0 12px 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+  background-size: cover;
+}
+
+.hero__title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero__subtitle {
+  font-size: 1.4rem;
+  opacity: 0.9;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+/* Content width for diagrams and equations */
+.markdown {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 0;
+}
+
+/* Section dividers */
+.markdown hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--ifm-color-border), transparent);
+  margin: 2.5rem 0;
+}
+
+/* Better spacing for long-form content */
+.markdown > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  margin-bottom: 1.6rem;
+}
+
+/* Search bar styling */
+.navbar__search {
+  padding-left: 1rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 996px) {
+  .sidebar {
+    position: relative;
+    top: 0;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--ifm-color-border);
+  }
+
+  .navbar__inner {
+    padding: 0 1rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+/* Animation for interactive elements */
+.menu__link,
+.navbar__link,
+a {
+  transition: all 0.2s ease;
+}
+
+/* Custom styling for technical content */
+.diagram-container {
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.8rem 0;
+  text-align: center;
+  overflow-x: auto;
+}
+
+.diagram-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Better code block visibility */
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 168, 255, 0.15);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+/* Improved accessibility and contrast */
+.theme-edit-this-page {
+  color: var(--electric-blue-light);
+  transition: color 0.2s ease;
+}
+
+.theme-edit-this-page:hover {
+  color: var(--electric-blue);
 }

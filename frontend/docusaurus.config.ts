@@ -72,12 +72,14 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Physical AI and Humanoid Robotics',
+      title: 'Physical AI & Humanoid Robotics',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Physical AI & Humanoid Robotics Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -87,7 +89,7 @@ const config: Config = {
           position: 'left',
           label: 'Textbook',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+      
         {
           href: 'https://github.com/alvina-abdullah',
           label: 'GitHub',
@@ -99,11 +101,40 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Learning Modules',
           items: [
             {
-              label: 'Textbook',
-              to: '/docs/intro',
+              label: 'Module 1: ROS 2',
+              to: '/docs/module-1/chapter-1-introduction',
+            },
+            {
+              label: 'Module 2: Digital Twin',
+              to: '/docs/module-2-digital-twin/intro',
+            },
+            {
+              label: 'Module 3: AI Brain',
+              to: '/docs/module-3-ai-brain/perception-training',
+            },
+            {
+              label: 'Module 4: VLA Systems',
+              to: '/docs/module-4-vla-autonomous/vla-systems',
+            },
+          ],
+        },
+        {
+          title: 'Resources',
+          items: [
+            {
+              label: 'Research Papers',
+              href: '#',
+            },
+            {
+              label: 'Code Examples',
+              href: '#',
+            },
+            {
+              label: 'Simulation Tools',
+              href: '#',
             },
           ],
         },
@@ -111,25 +142,12 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Robotics Forum',
+              href: '#',
             },
             {
               label: 'Discord',
               href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
             },
             {
               label: 'GitHub',
@@ -138,11 +156,13 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Physical AI and Humanoid Robotics,  Built with ❤️ by Alvina Abdullah .`,
+      copyright: `Copyright © ${new Date().getFullYear()} Physical AI & Humanoid Robotics Textbook-
+       Built with ❤️ by Alvina Abdullah.`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: prismThemes.vsLight,
+      darkTheme: prismThemes.vsDark,
+      additionalLanguages: ['python', 'cpp', 'bash', 'json', 'yaml'],
     },
   } satisfies Preset.ThemeConfig,
 };

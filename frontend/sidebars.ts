@@ -18,10 +18,19 @@ const sidebars: SidebarsConfig = {
 
   // But you can create a sidebar manually
   tutorialSidebar: [
-    'intro',
+    {
+      type: 'category',
+      label: 'Getting Started',
+      collapsed: false,
+      items: [
+        'intro',
+      ],
+    },
     {
       type: 'category',
       label: 'Module 1: The Robotic Nervous System (ROS 2)',
+      collapsible: true,
+      collapsed: false,
       items: [
         'module-1/chapter-1-introduction',
         'module-1/chapter-2-communication-primitives',
@@ -31,6 +40,8 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Module 2: The Digital Twin (Gazebo & Unity)',
+      collapsible: true,
+      collapsed: false,
       items: [
         'module-2-digital-twin/intro',
         'module-2-digital-twin/gazebo-physics',
@@ -40,6 +51,8 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Module 3: The AI-Robot Brain (NVIDIA Isaac™)',
+      collapsible: true,
+      collapsed: false,
       items: [
         'module-3-ai-brain/perception-training',
         'module-3-ai-brain/spatial-intelligence',
@@ -49,13 +62,14 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Module 4: Vision-Language-Action (VLA) & The Autonomous Humanoid',
+      collapsible: true,
+      collapsed: false,
       items: [
         'module-4-vla-autonomous/vla-systems',
         'module-4-vla-autonomous/voice-to-action',
         'module-4-vla-autonomous/capstone-autonomous',
       ],
     },
-    
   ],
 };
 

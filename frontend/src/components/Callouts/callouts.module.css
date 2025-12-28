@@ -1,0 +1,69 @@
+.definitionBox {
+  background: linear-gradient(135deg, rgba(0, 168, 255, 0.1) 0%, rgba(0, 188, 212, 0.1) 100%);
+  border: 1px solid #00a8ff;
+  border-left: 4px solid #00a8ff;
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin: 1.5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.definitionTitle {
+  font-weight: 600;
+  color: #00a8ff;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+.definitionContent {
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+.equationBox {
+  background: rgba(0, 168, 255, 0.08);
+  border: 1px solid #00bcd4;
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin: 1.5rem 0;
+  text-align: center;
+  font-family: 'Latin Modern Math', 'STIX Two Math', serif;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.equationContent {
+  color: #e0e0e0;
+  font-size: 1.3rem;
+}
+
+.equationLabel {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: #33bbff;
+  font-style: italic;
+}
+
+.keyIdeaBox {
+  background: linear-gradient(135deg, rgba(0, 188, 212, 0.1) 0%, rgba(0, 168, 255, 0.05) 100%);
+  border: 1px solid #00bcd4;
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin: 1.5rem 0;
+  position: relative;
+  border-left: 4px solid #00bcd4;
+}
+
+.keyIdeaTitle {
+  font-weight: 600;
+  color: #00bcd4;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.keyIdeaContent {
+  color: #e0e0e0;
+  line-height: 1.6;
+}
