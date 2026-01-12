@@ -1,0 +1,18 @@
+{
+  "link.title.Learning Modules": {
+    "message": "سیکھنے کے ماڈیولز",
+    "description": "The title of the footer link column with title=Learning Modules in the footer"
+  },
+  "link.title.Resources": {
+    "message": "وسائل",
+    "description": "The title of the footer link column with title=Resources in the footer"
+  },
+  "link.title.Community": {
+    "message": "برادری",
+    "description": "The title of the footer link column with title=Community in the footer"
+  },
+  "copyright": {
+    "message": "کاپی رائٹ © $CURRENT_YEAR$ فزیکل ای اور ہیومنوائڈ روبوٹکس ٹیکسٹ بک - الوینا عبداللہ کے ذریعہ ❤️ سے تعمیر کردہ۔",
+    "description": "The footer copyright"
+  }
+}

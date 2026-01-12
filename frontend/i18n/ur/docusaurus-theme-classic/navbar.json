@@ -1,0 +1,18 @@
+{
+  "title": {
+    "message": "فزیکل ای اور ہیومنوائڈ روبوٹکس",
+    "description": "The title in the navbar"
+  },
+  "item.label.Textbook": {
+    "message": "کتاب درس",
+    "description": "Navbar item with label Textbook"
+  },
+  "item.label.GitHub": {
+    "message": "گیت ہب",
+    "description": "Navbar item with label GitHub"
+  },
+  "item.label.🤖 AI Assistant": {
+    "message": "🤖 مصنوعی ذہانت اسسٹنٹ",
+    "description": "Navbar item with label AI Assistant"
+  }
+}

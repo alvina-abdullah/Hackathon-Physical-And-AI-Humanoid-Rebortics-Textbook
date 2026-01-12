@@ -97,6 +97,16 @@
 
 /* Light theme */
 [data-theme='light'] {
+
+  
+   /* Backgrounds */
+  --ifm-background-color: var(--robotics-dark-gray);
+  --ifm-background-surface-color: var(--robotics-charcoal);
+  --ifm-navbar-background-color: rgba(240, 240, 240, 0.95);
+  --ifm-sidebar-background-color: var(--robotics-graphite);
+  --ifm-footer-background-color: var(--robotics-charcoal);
+
+
   --ifm-color-primary: var(--electric-blue);
   --ifm-color-primary-dark: var(--electric-blue-dark);
   --ifm-color-primary-darker: #0077b3;
@@ -162,7 +172,7 @@ h2 {
 }
 
 h2:before {
-  content: '▶';
+  /* content: '▶'; */
   position: absolute;
   left: -25px;
   color: var(--electric-blue-light);
@@ -460,6 +470,7 @@ table th {
   border-top: 1px solid var(--ifm-color-border);
   padding-top: 3rem;
   padding-bottom: 2rem;
+  color: white;
 }
 
 .footer__title {
@@ -482,9 +493,9 @@ table th {
   background: var(--robotics-gradient);
   color: white;
   text-align: center;
-  padding: 4rem 0;
+  padding: 1rem 0 0 0;
   margin-bottom: 3rem;
-  border-radius: 0 0 12px 12px;
+  border-radius: 0 0 1px 1px;
   position: relative;
   overflow: hidden;
 }
@@ -497,11 +508,12 @@ table th {
   right: 0;
   bottom: 0;
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
-  background-size: cover;
+  /* background-size: cover; */
 }
 
 .hero__title {
   font-size: 3rem;
+  /* color:white; */
   font-weight: 700;
   margin-bottom: 1rem;
   text-shadow: 0 2px 4px rgba(0,0,0,0.3);
@@ -511,7 +523,7 @@ table th {
   font-size: 1.4rem;
   opacity: 0.9;
   max-width: 800px;
-  margin: 0 auto 2rem;
+  margin: 0 auto 1rem;
 }
 
 /* Content width for diagrams and equations */
